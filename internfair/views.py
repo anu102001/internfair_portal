@@ -10,3 +10,6 @@ def recruiter(request):
 
 def studentregistration(request):
     return render(request, "StudentRegistration.html")
+
+def recruiteregistration(request):
+    return render(request, "RecruiterRegistration.html")

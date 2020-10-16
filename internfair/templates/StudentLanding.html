@@ -27,7 +27,7 @@
                 <a href="#" class="nav-menu">Contact Us</a>
             </li>
           </ul>
-          <button class="RegisterBtn">Register</button>
+          <button class="RegisterBtn" onclick="window.location.href='{% url 'studentregistration' %}';">Register</button>
         </div>
       </nav>
 
@@ -56,7 +56,7 @@
 
                     <div class="row justify-content-end" style="margin-top: 24px;">
                         <div class="col-6">
-                            <span class="recruiter">Don’t have an account?</span>
+                            <a class="recruiter" href="{% url 'studentregistration' %}">Don’t have an account?</a>
                         </div>
                         <div class="col-6 text-right">
                             <a class="recruiter" href="">Forgot Password?</a>
