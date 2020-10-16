@@ -5,6 +5,8 @@ from django.views import View
 def index(request):
     return render(request, "StudentLanding.html")
 
+def recruiter(request):
+    return render(request, "RecruiterLanding.html")
 
-
-
+def studentregistration(request):
+    return render(request, "StudentRegistration.html")

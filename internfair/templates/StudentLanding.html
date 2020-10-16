@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <title>Home-Student</title>
     <script type='text/javascript' src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script type='text/javascript' src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
@@ -17,7 +17,7 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-      
+
         <div class="collapse navbar-collapse drop-menu" id="navbarTogglerDemo02">
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="menu-item">
@@ -45,7 +45,7 @@
                             <span class="studentLogin">Student Login</span>
                         </div>
                         <div class="col-6 text-right">
-                            <a class="recruiter" href="">I am a recruiter</a>
+                            <a class="recruiter" href="{% url 'recruiter' %}">I am a recruiter</a>
                         </div>
                     </div>
                     <form action="">
@@ -53,7 +53,7 @@
                         <input type="text" placeholder="Password" class="input">
                         <input type="submit" value="Login" class="login">
                     </form>
-                    
+
                     <div class="row justify-content-end" style="margin-top: 24px;">
                         <div class="col-6">
                             <span class="recruiter">Don’t have an account?</span>
@@ -63,8 +63,8 @@
                         </div>
                     </div>
                 </div>
-                
-            
+
+
             </div>
             <div class="col-lg-7 order-lg-2 order-md-2 order-1 text-center col-md-6 col-12" id="intro"  >
                 <img class="sideImg" src="{% static 'image/sideImg.png' %}" alt="">
@@ -73,6 +73,6 @@
        </div>
       </div>
 
-      
+
 </body>
 </html>
