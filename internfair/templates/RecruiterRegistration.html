@@ -2,7 +2,7 @@
 {% load static %}
 <html lang="en">
   <head >
-    <link rel="stylesheet" href="./{% static 'css/RecruiterRegistration.css' %}">
+    <link rel="stylesheet" href="{% static 'css/RecruiterRegistration.css' %}">
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -23,13 +23,13 @@
       <div class="collapse navbar-collapse drop-menu" id="navbarTogglerDemo02">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="menu-item">
-              <a href="#" class="nav-menu" style="margin-right: 8vw;">Home</a>
+              <a href="{% url 'RecruiterLanding' %}" class="nav-menu" style="margin-right: 8vw;">Home</a>
           </li>
           <li class="menu-item">
               <a href="#" class="nav-menu">Contact Us</a>
           </li>
         </ul>
-        <button class="RegisterBtn">Register</button>
+        <a href="{% url 'RecruiterRegistration' %}"><button class="RegisterBtn">Register</button></a>
       </div>
     </nav>
       <div class="head">
@@ -58,6 +58,6 @@
             <button type="button" class="btn btn-primary btn-lg btn-block regn">Register</button>
         </div>
       </form>
-      <div class="student"><a class="intern" href="#"> I am a Student</a></div>
+      <div class="student"><a class="intern" href="{% url 'StudentRegistration' %}"> I am a Student</a></div>
   </body>
 </html>
