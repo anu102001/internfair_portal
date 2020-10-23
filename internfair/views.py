@@ -20,3 +20,6 @@ def studentProfile1(request):
 
 def availableInternships(request):
     return render(request, "AvailableInternships.html")
+
+def applyToCompany(request):
+    return render(request, "ApplyToCompanyCard.html")
