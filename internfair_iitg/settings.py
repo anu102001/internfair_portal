@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 """
 Django settings for internfair_iitg project.
 
@@ -124,7 +124,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
-=======
+
 """
 Django settings for internfair_iitg project.
 
@@ -250,4 +250,3 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
->>>>>>> 52699643e89846ecad8860259f347e73e47ff765
