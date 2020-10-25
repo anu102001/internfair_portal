@@ -9,5 +9,5 @@ urlpatterns = [
     path('recruiter/', views.RecruiterLanding, name="RecruiterLanding"),
     path('recruiter/register', views.RecruiterRegistration, name="RecruiterRegistration"),
     path('recruiter/availableInterns', views.AvailableInterns, name="AvailableInterns"),
-    path('recruiter/companyProfile', views.CompanyProfile, name="CompanyProfile"),
+    path('recruiter/profile', views.CompanyProfile, name="CompanyProfile"),
 ]

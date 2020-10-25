@@ -32,23 +32,18 @@
       background: #ffffff;
       box-shadow: 0px 2px 8px rgba(72, 74, 82, 0.08);
     }
-    .navbar-light .navbar-nav .active
-    {
+    .navbar-light .navbar-nav .active>
+    .current-page {
+      color: #416EA8;
+    }
+    .navbar-light .navbar-nav>
+    .curr-page-ul {
+      border-bottom: 2px solid #416EA8;
+    }
+    .navbar-light .navbar-nav .active>.nav-link:hover {
       color: #416EA8;
     }
 
-    div a,
-    div a:after,
-    div a:before {
-      transition: all .1s;
-    }
-
-    div .activa{
-      color: #416EA8;
-    }
-    div a:hover:after {
-      width: 80%;
-    }
 
     input[type="search"] {
 
@@ -63,6 +58,10 @@
     align-items: center;
     background-color: #416EA8;
     border-radius: 20%;
+    }
+    .btn-outline-custom {
+      color: #416EA8;
+      border-color: #416EA8;
     }
   .search-color{
     color: #FFFFFF;
@@ -99,18 +98,7 @@
     .profile-userpic img {
       border-radius: 50%;
     }
-    .navbar-light .navbar-nav .active>.nav-link:hover {
-      color: #416EA8;
-    }
     @media (min-width: 768px) {
-      .hov:hover {
-        color: #416EA8;
-      }
-      a.activo {
-        border-bottom: 2px solid #416EA8;
-        border-width: 80%;
-        padding-bottom: 15px;
-      }
       .profile-userpic img {
         max-height: 30px;
         max-width: 30px;
@@ -130,6 +118,10 @@
     }
 
     @media(max-width: 768px) {
+      .navbar-light .navbar-nav>
+      .curr-page-ul {
+        border: none;
+      }
       #company-name {
         text-align: center;
         margin-bottom: 1.5rem;

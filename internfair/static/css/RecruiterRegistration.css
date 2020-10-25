@@ -36,7 +36,8 @@ ul{
 .RegisterBtn{
     width: 91px;
     height: 34px;
-    background: #416EA8;
+    background-color: #416EA8;
+    border-color: #416EA8;
     border-radius: 4px;
     font-family: GT Walsheim Pro;
     font-style: normal;

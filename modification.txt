@@ -1,0 +1,20 @@
+MAJOR POINTS: Contact us page, HOW TO MAKE THE TABLE ROW A link
+
+
+modify clicking on internfiar button in top left corner of page, redirect to homepage
+check titles of everything
+
+Card waala kaam
+
+Student Registration page - fix navbar, change register button to login, title of page
+Recruiter Registration page - provide some margin at bottom of page, make the register button a link
+ and change it to login
+
+Student profile page - Apply to companies button, change of navbar, spacing between search button
+ internship you've registered for is not a link, 
+
+Student Available internship page - navbar, search button, 
+
+Recruiter home - navbar background, Capitalize 'don't have an account link' and 'forgot password' link
+
+Recruiter Profile Page - Change Navbar, Active forms waali line mein kuch gadbad, Search button, 
