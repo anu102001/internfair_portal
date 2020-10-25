@@ -8,32 +8,6 @@
   font-style: normal;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 a {
   color: #000000;
   text-decoration: none;
@@ -70,16 +44,16 @@ body {
 
 
 .profile-userpic img {
-
+    
   float: none;
-  margin: 0 auto;
+  margin: 0 auto; 
   -webkit-border-radius: 50% !important;
   -moz-border-radius: 50% !important;
   border-radius: 50% !important;
   width: 100%;
   height: 100%;
-
-
+  
+  
 }
 
 .top {
@@ -147,10 +121,14 @@ body {
   font-weight: 700;
   line-height: 1.2;
   font-size: 2.25rem;
-}
+}  
 
 .apply {
     text-align: center;
     margin-left: 3rem !important;
     margin-top: 7rem !important;
 }
+
+
+
+

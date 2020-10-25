@@ -1,4 +1,3 @@
-
 from django.shortcuts import render
 from django.views import View
 # Create your views here.
@@ -21,5 +20,21 @@ def studentProfile1(request):
 def availableInternships(request):
     return render(request, "AvailableInternships.html")
 
-def applyToCompany(request):
+def studentProfile2(request):
+    return render(request, "StudentProfile2.html")
+
+def companyProfile(request):
+    return render(request, "CompanyProfile.html")
+
+def studentEditProfileCard(request):
+    return render(request, "StudentEditProfileCard.html")
+
+def applyToCompanyCard(request):
     return render(request, "ApplyToCompanyCard.html")
+
+def internshipQuestionsCard2(request):
+    return render(request, "InternshipQuestionsCard2.html")
+
+
+
+
