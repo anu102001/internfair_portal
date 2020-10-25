@@ -14,14 +14,14 @@
 
   <link rel="stylesheet" href="{% static 'css/StudentRegistration.css' %}">
 
-  <title>Page1</title>
+  <title>Student Registration</title>
 </head>
 
 <body>
 
 
   <nav class="navbar navbar-expand-lg navbar-light bg-white">
-    <a class="navbar-brand" href="#">Internfair</a>
+    <a class="navbar-brand" href="{% url 'index' %}">Internfair</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
       aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -37,7 +37,7 @@
       </ul>
     </div>
     <form class="form-inline register">
-      <a class="btn btn-primary " href="{% url 'StudentRegistration' %}" role="button">Register</a>
+      <a class="btn btn-primary " href="{% url 'index' %}" role="button">Login</a>
     </form>
   </nav>
 

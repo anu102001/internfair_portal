@@ -16,7 +16,7 @@
   </head>
   <body>
     <nav class="navbar navbar-edit navbar-expand-lg navbar-light bg-light" style="padding: 1vh 8vw; box-shadow: 0px 2px 8px rgba(72, 74, 82, 0.08); background-color: #FFFFFF !important">
-      <a class="brand" href="#" id="brand">Internfair</a>
+      <a class="brand" href="{% url 'RecruiterLanding' %}" id="brand">Internfair</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>    
@@ -29,7 +29,7 @@
               <a href="#" class="nav-menu">Contact Us</a>
           </li>
         </ul>
-        <a href="{% url 'RecruiterRegistration' %}"><button class="RegisterBtn">Register</button></a>
+        <button class="RegisterBtn"><a href="{% url 'RecruiterLanding' %}" style="color: #ffffff;">Login</a></button>
       </div>
     </nav>
       <div class="head">
@@ -58,6 +58,6 @@
             <button type="button" class="btn btn-primary btn-lg btn-block regn">Register</button>
         </div>
       </form>
-      <div class="student"><a class="intern" href="{% url 'StudentRegistration' %}"> I am a Student</a></div>
+      <div class="student mt-2 mb-4"><a class="intern" href="{% url 'StudentRegistration' %}"> I am a Student</a></div>
   </body>
 </html>

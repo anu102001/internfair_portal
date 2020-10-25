@@ -9,7 +9,7 @@
 
   <link rel="stylesheet" type="text/css" href="{% static 'css/StudentProfile1.css' %}">
 
-  <title>Avalible interns</title>
+  <title>Profile</title>
 </head>
 <body>
 
@@ -61,7 +61,7 @@
 
     <div class="row mb-5 justify-content-between">
         <div class="col-md-6 pb-4 pb-md-0" style="font-size: 1.5rem">
-          <a class="d-block d-lg-inline" href="#">Internships you've registered for</a>
+          <p class="d-block d-lg-inline">Internships you've registered for</p>
         </div>
         <div class="col-md-6 d-flex col-lg-4 flex-row-reverse align-items-start">
             <button class="btn btn-outline-primary">
@@ -70,7 +70,7 @@
               <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
               </svg>
             </button>
-            <input class="form-control form-control-dark w-100 w-lg-50" type="text" placeholder="Search" aria-label="Search">
+            <input class="form-control form-control-dark w-100 w-lg-50 mr-2" type="text" placeholder="Search" aria-label="Search">
       
           </div>
         </div>
@@ -79,7 +79,7 @@
 
     <div class="apply">
         <p>You haven't applied to any companies yet. Start by looking at<br>company's requirements</p>
-      <a class="btn btn-primary btn-lg" href="#" role="button" style="background: #416EA8;">Apply to companies</a>
+      <a class="btn btn-primary btn-lg" href="{% url 'AvailableInternships' %}" role="button" style="background: #416EA8;">Apply to companies</a>
       </div>
   
   
