@@ -154,13 +154,10 @@ body {
 
     .modalcontent {
         position: relative;
-        display: -ms-flexbox;
-        display: flex;
         -ms-flex-direction: column;
         flex-direction: column;
         width: 100%;
         pointer-events: auto;
-        background-color: #fff;
         background-clip: padding-box;
         border-radius: .3rem;
         outline: 0;
@@ -168,7 +165,6 @@ body {
     .card{
 
       font-family: GT Walsheim Pro;
-      position: absolute;
       transform: translate(-50%,-50%);
       border: white;
       background-color: white!important;
@@ -177,7 +173,6 @@ body {
       top: 50%;
       left: 50%;
       width: 500px;
-      position: absolute;
       background: #FFFFFF;
       border-radius: 16px;
 
@@ -349,7 +344,6 @@ body {
     button.uploadbtn{
 
       width:250px;
-      height:30px;
       margin-left: 0px;
       border-width: thin;
       color : #304980;
