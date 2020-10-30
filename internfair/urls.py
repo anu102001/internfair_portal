@@ -10,6 +10,8 @@ urlpatterns = [
     path('availableInternships', views.availableInternships, name='availableInternships'),
     path('studentProfile2', views.studentProfile2, name='studentProfile2'),
     path('companyProfile', views.companyProfile, name='companyProfile'),
+
+    
     path('studentEditProfileCard', views.studentEditProfileCard, name='studentEditProfileCard'),
     path('applyToCompanyCard', views.applyToCompanyCard, name='applyToCompanyCard'),
     path('internshipQuestionsCard2', views.internshipQuestionsCard2, name='internshipQuestionsCard2'),

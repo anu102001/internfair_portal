@@ -50,11 +50,11 @@
       <p>Chemical Science And Technology</p>
       <div class="light-text" style="font-size: .75rem;">ROLL NUMBER</div>
       <p>160103019</p>
-      <a href= "/studentEditProfileCard" style="color: #416EA8; font-size: .75rem;">Edit Profile</a>
+      <button id="myBtn" style="color: #416EA8; font-size: .75rem; display: block; text-decoration:none;">Edit Profile</button>
     </div>
     <div class="col-md-6 d-flex align-items-center">
-      
-      
+
+
     </div>
   </div>
     <hr class="line">
@@ -71,18 +71,132 @@
               </svg>
             </button>
             <input class="form-control form-control-dark w-100 w-lg-50" type="text" placeholder="Search" aria-label="Search">
-      
+
           </div>
         </div>
-      
-      
+
+
 
     <div class="apply">
         <p>You haven't applied to any companies yet. Start by looking at<br>company's requirements</p>
       <a class="btn btn-primary btn-lg" href="#" role="button" style="background: #416EA8;">Apply to companies</a>
       </div>
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
+
+
+      <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modalcontent">
+          <div class="card card-container">
+              <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+              <h4 class = "prof"> Edit Profile </h4>
+              <span class="close" style="color: #aaaaaa;font-size: 28px;font-weight: bold;position: absolute;top: 10px;right: 10px;"><a href="#" style="text-decoration: none;">&times;</a></span>
+
+
+              <img id="profile-img" class="profile-img-card" src="{% static 'image/test_image_ecell.jpg' %}" />
+              <div class="container col-md-8">
+                <button class="uploadbtn" onclick="document.getElementById('getFile').click()">Upload/Change Company Photo</button>
+                  <input type='file' id="getFile" style="display:none">
+              </div>
+              <p class="size">
+               <a href="#">
+                   JPG or PNG. Max size 800KB.
+               </a>
+               </p>
+
+              <p id="profile-name" class="profile-name-card"></p>
+              <form class="form-signin">
+                  <span id="reauth-email" class="reauth-email"></span>
+                  <label class="company-name" for="ROLL NUMBER">
+                       ROLL NUMBER
+                  </label>
+                  <input type="text" id="ROLL NUMBER" class="form-control" required autofocus>
+                  <p class="full">
+                   <a href="#">
+                       Kindly use full name.Eg: Mechanical Engineering*.
+                   </a>
+                   </p>
+                  <label class="company-name" for="DEPARTMENT">
+                       DEPARTMENT
+                  </label>
+                  <input type="text" id="DEPARTMENT" class="form-control" required>
+                  <label class="company-name" for="BIO">
+                       BIO
+                  </label>
+                  <input type="text" id="BIO" class="form-control" required>
+
+                  <div class="form-group row">
+
+                      <div class="col col-md-4">
+                        <button class="btn btn-sm smaller btn-btn-primary  mybtn" type="submit">Save Changes</button>
+                      </div>
+
+                      <div class="col col-sm-2">
+                        <button class="btn btn-sm smaller btn-link btn-signin" type="submit">No</button>
+                      </div>
+
+
+
+
+                  </div>
+
+
+
+              </form>
+
+          </div>
+        </div>
+
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+      <script>
+      // Get the modal
+      var modal = document.getElementById("myModal");
+
+      // Get the button that opens the modal
+      var btn = document.getElementById("myBtn");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks the button, open the modal
+
+      btn.onclick = function() {
+        modal.style.display = "block";
+      }
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+      </script>
+
+
+
 </body>
 </html>
