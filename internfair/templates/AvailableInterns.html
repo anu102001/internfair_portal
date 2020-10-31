@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 {% load static %}
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -50,18 +51,18 @@
       <p>AI startup Kolkata, researching on neural pathways.</p>
       <div class="light-text" style="font-size: .75rem;">LOCATION</div>
       <p>Kolkata</p>
-      <a href= "#" style="color: #416EA8; font-size: .75rem;">Edit Profile</a>
+      <button id="myEditBtn" style="color: #416EA8; font-size: .75rem;">Edit Profile</button>
     </div>
     <div class="col-md-6 d-flex align-items-center">
       <div>
         <p>Add a new internship position to start recruiting</p>
       <a class="btn btn-custom btn-responsive" href="#" role="button">Add an internship form</a>
       </div>
-      
+
     </div>
   </div>
     <hr class="line">
-  
+
   <div class="row mb-5 justify-content-between">
     <div class="col-md-6 pb-4 pb-md-0 highlight">
       <a class="d-block d-lg-inline" href="#">Available Interns |</a>
@@ -88,8 +89,8 @@
           <div class="col padding">PROFILE</div>
           <div class="col padding">DEPARTMENT</div>
         </div>
-        
-      </div>  
+
+      </div>
     </div>
 
   <div class="row p-2 p-md-0" id="first-student">
@@ -98,21 +99,9 @@
         <div class="row flex-column flex-md-row  justify-content-center " style="height: 100%;">
           <div class="col-md-4 padding">Priyanshu Gupta</div>
           <div class="col-md-4 padding">Front-end</div>
-          <div class="col-md-4 padding">Mechanical Engineering</div>  
+          <div class="col-md-4 padding">Mechanical Engineering</div>
         </div>
       </div>
-    </div>
-    
-    <div class="row p-2 p-md-0 top">
-      <div class="col-3 col-md-auto profile-userpic padding p-0 mx-3 m-md-0"><img src="https://cdn130.picsart.com/321379439036201.jpg?type=webp&to=crop&r=256" class="img-fluid"></div>
-      <div class="col-auto col-md p-0 px-md-3">
-        <div class="row flex-column flex-md-row  justify-content-center " style="height: 100%;">
-          <div class="col-md-4 padding">Priyanshu Gupta</div>
-          <div class="col-md-4 padding">Front-end</div>
-          <div class="col-md-4 padding">Mechanical Engineering</div>  
-        </div>
-      </div>
-      
     </div>
 
     <div class="row p-2 p-md-0 top">
@@ -121,10 +110,10 @@
         <div class="row flex-column flex-md-row  justify-content-center " style="height: 100%;">
           <div class="col-md-4 padding">Priyanshu Gupta</div>
           <div class="col-md-4 padding">Front-end</div>
-          <div class="col-md-4 padding">Mechanical Engineering</div>  
+          <div class="col-md-4 padding">Mechanical Engineering</div>
         </div>
       </div>
-      
+
     </div>
 
     <div class="row p-2 p-md-0 top">
@@ -133,10 +122,10 @@
         <div class="row flex-column flex-md-row  justify-content-center " style="height: 100%;">
           <div class="col-md-4 padding">Priyanshu Gupta</div>
           <div class="col-md-4 padding">Front-end</div>
-          <div class="col-md-4 padding">Mechanical Engineering</div>  
+          <div class="col-md-4 padding">Mechanical Engineering</div>
         </div>
       </div>
-      
+
     </div>
 
     <div class="row p-2 p-md-0 top">
@@ -145,10 +134,10 @@
         <div class="row flex-column flex-md-row  justify-content-center " style="height: 100%;">
           <div class="col-md-4 padding">Priyanshu Gupta</div>
           <div class="col-md-4 padding">Front-end</div>
-          <div class="col-md-4 padding">Mechanical Engineering</div>  
+          <div class="col-md-4 padding">Mechanical Engineering</div>
         </div>
       </div>
-      
+
     </div>
 
     <div class="row p-2 p-md-0 top">
@@ -157,21 +146,127 @@
         <div class="row flex-column flex-md-row  justify-content-center " style="height: 100%;">
           <div class="col-md-4 padding">Priyanshu Gupta</div>
           <div class="col-md-4 padding">Front-end</div>
-          <div class="col-md-4 padding">Mechanical Engineering</div>  
+          <div class="col-md-4 padding">Mechanical Engineering</div>
         </div>
       </div>
-      
-    </div>
-  
-  
 
-</div>
+    </div>
+
+    <div class="row p-2 p-md-0 top">
+      <div class="col-3 col-md-auto profile-userpic padding p-0 mx-3 m-md-0"><img src="https://cdn130.picsart.com/321379439036201.jpg?type=webp&to=crop&r=256" class="img-fluid"></div>
+      <div class="col-auto col-md p-0 px-md-3">
+        <div class="row flex-column flex-md-row  justify-content-center " style="height: 100%;">
+          <div class="col-md-4 padding">Priyanshu Gupta</div>
+          <div class="col-md-4 padding">Front-end</div>
+          <div class="col-md-4 padding">Mechanical Engineering</div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <div id="myEditModal" class="editmodal">
+
+      <!-- Modal content -->
+      <div class="editmodalcontent">
+        <div class="card card-container">
+            <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+            <h4 class = "prof"> Edit Profile </h4>
+            <span class="close" style="color: #aaaaaa;font-size: 28px;font-weight: bold;position: absolute;top: 10px;right: 10px;"><a href="#" style="text-decoration: none;">&times;</a></span>
+
+
+            <img id="profile-img" class="profile-img-card" src="{% static 'image/p.png' %}" />
+            <div class=" col-md-8">
+
+            </div>
+
+            <p id="profile-name" class="profile-name-card"></p>
+            <form class="form-signin">
+              <button class=" uploadbtn" onclick="document.getElementById('getFile').click()">Upload/Change Company Photo</button>
+              <input type='file' id="getFile" style="display:none">
+                <span id="reauth-email" class="reauth-email"></span>
+                <label class="company-name" for="company-name">
+                     COMPANY NAME
+                </label>
+                <input type="text" id="company-name" class="form-control" required autofocus>
+                <label class="company-name" for="company-description">
+                     COMPANY DESCRIPTION
+                </label>
+                <input type="text" id="company-description" class="form-control" required>
+                <label class="company-name" for="company-locations">
+                     COMPANY LOCATION
+                </label>
+                <input type="text" id="company-location" class="form-control" required>
+
+                <div class="form-group row">
+
+                    <div class="col col-md-4">
+                      <button class="btn btn-sm smaller btn-btn-primary  mybtn" type="submit">Save Changes</button>
+                    </div>
+
+                    <div class="col col-sm-2">
+                      <a class="btn btn-sm smaller btn-link mybtn1" href="#">No</a>
+                    </div>
+
+
+
+
+                </div>
+
+
+
+            </form>
+
+        </div>
+      </div>
+
+      </div>
+    </div>
+
+
+    <script>
+      // Get the modal
+      var modal = document.getElementById("myEditModal");
+
+      // Get the button that opens the modal
+      var btn = document.getElementById("myEditBtn");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks the button, open the modal
+
+      btn.onclick = function() {
+        modal.style.display = "block";
+      }
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    </script>
+
+
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
 
-  
+
 </body>
 </html>

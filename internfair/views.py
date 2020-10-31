@@ -24,7 +24,7 @@ def studentProfile2(request):
     return render(request, "StudentProfile2.html")
 
 def companyProfile(request):
-    return render(request, "CompanyProfile.html")
+    return render(request, "AvailableInterns.html")
 
 def studentEditProfileCard(request):
     return render(request, "StudentEditProfileCard.html")
@@ -34,7 +34,3 @@ def applyToCompanyCard(request):
 
 def internshipQuestionsCard2(request):
     return render(request, "InternshipQuestionsCard2.html")
-
-
-
-
