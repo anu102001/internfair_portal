@@ -127,3 +127,322 @@
         margin-bottom: 1.5rem;
       }
     }
+    
+    .card{
+    
+      font-family: GT Walsheim Pro;
+      position: absolute;
+      transform: translate(-50%,-50%);
+      border: white;
+    background-color: white!important;
+      padding: 30px;
+      margin: 20px;
+      padding: 36px 36px 0px 36px;
+      align-self:center ;
+      top: 50%;
+      left: 50%;
+  position: absolute;
+  width: 575px;
+  height: 455px;
+  background: #FFFFFF;
+  border-radius: 16px;
+  
+      }
+  .name{
+       width: 127px;
+  height: 41px;
+  font-size: 20px;
+  line-height: 41px;
+  margin: 0px 5px;
+  transform:translate(13px);
+  color: #212121;
+  font-weight: 600;
+  font-family: GT Walsheim Pro;
+  }
+    
+  #image{
+      
+      text-shadow: gray ;
+  height: 60px;
+  transform:translate(10px);
+  background: url(google-new-logo-1030x541.jpg);
+  }
+  
+  .right {
+    
+    text-align : left;
+      top :50%;
+      font-family: GT Walsheim Pro;
+      transform: translate(335px,-170px);
+  }
+  
+  .left{
+      transform: translate(10px,15px);
+  }
+  
+  .answer{
+      font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: #212121;
+      transform: translateY(-15px);
+  }
+  
+  .lead{
+    
+  font-style: normal ;
+  transform: translateY(-5px);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #B6B6B6;
+  
+  
+  }
+  .apply{  
+      font-size : 16px;
+      align-self: center;
+      position: static;
+      width: 100%;
+    
+      height: 50px;
+      color:white;
+      background: #416EA8;
+      transform: translate(-33px,-130px)!important;
+      text-decoration-color:rgb(42, 42, 202);
+      transform : translateY(-170px);
+      border-radius: 5px;
+      border: blue;}
+  
+  .x{
+      transform:translateY(-13px);
+  }
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .questionModal
+  {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+  }
+  
+  .input {
+    width: 100%;
+    height: 52px;
+    border: none;
+    background: #EEF4FB;
+    border-radius: 6px;
+    padding-left: 25px;
+    margin-top: 10px;
+  }
+  
+  .quesCard {
+    font-family: GT Walsheim Pro;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border: white;
+    background-color: white !important;
+    padding: 30px;
+    margin: 20px;
+    padding: 36px 0px 0px 36px;
+    align-self: center;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    width: 575px;
+    height: 700px;
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding-left: 10px;
+  
+  
+  }
+  
+  .heading {
+    font-family: GT Walsheim Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 27px;
+    color: #212121;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .sub-heading {
+    font-family: GT Walsheim Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    flex: none;
+    order: 1;
+    align-self: flex-start;
+    color: #3A3A3A;
+    margin-bottom: -10px !important;
+  }
+  
+  .Qheading {
+    padding-top: 20px;
+    font-family: GT Walsheim Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #6A6A6A;
+  }
+  
+  .addQues {
+    padding: 2%;
+    background-color: white;
+    font-family: GT Walsheim Pro;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    border: 1px solid #416EA8;
+    box-sizing: border-box;
+    border-radius: 4px;
+    color: #416EA8;
+  
+  }
+  
+  
+  .bottom {
+    position: relative;
+    bottom: -100px !important;
+  }
+  
+  .back {
+    font-family: GT Walsheim Pro;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #416EA8;
+  }
+  
+  .Publish {
+    width: 125px;
+    height: 42px;
+    background: #416EA8;
+    border-radius: 4px;
+    font-family: GT Walsheim Pro;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    color: #FFFFFF;
+  
+  
+  }
+  
+  @media (max-width:750px) {
+    .quesCard {
+      width: 80%;
+      height: fit-content;
+      padding-bottom: 10px;
+    }
+  
+    .bottom {
+      bottom: 0% !important;
+    }
+  
+    .Publish {
+      width: 100px;
+    }
+  
+    .input {
+      height: 40px;
+    }
+  }
+  
+  @media (max-width:400px) {
+    .Publish {
+      width: 70px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .hov:hover {
+      color: #416EA8;
+    }
+  }
+    a.activo {
+      border-bottom: 2px solid #416EA8;
+      border-width: 80%;
+      padding-bottom: 15px;
+    }
+  
+    .profile-userpic img {
+      max-height: 30px;
+      max-width: 30px;
+      border-radius: 50%;
+    }
+  
+    .little-center-table {
+      padding-left: 20px;
+    }
+  
+    .padding {
+      padding: .75rem !important;
+    }
+  
+    input[type="search"] {
+      width: 302px;
+      height: 36px;
+    }
