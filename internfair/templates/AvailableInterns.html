@@ -28,7 +28,7 @@
             <a class="nav-link current-page" href="#">Dashboard<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active py-md-2">
-            <a class="nav-link" href="#">Internship Statistics</a>
+            <a class="nav-link" href="/recruiter/internshipstatics">Internship Statistics</a>
           </li>
           <li class="nav-item active py-md-2">
             <a class="nav-link" href="#">Contact Us</a>
@@ -56,7 +56,7 @@
     <div class="col-md-6 d-flex align-items-center">
       <div>
         <p>Add a new internship position to start recruiting</p>
-      <a class="btn btn-custom btn-responsive" href="#" role="button">Add an internship form</a>
+      <a id="Addinternformidbtn" class="btn btn-custom btn-responsive" style="align-content: center;">Add an internship form</a>
       </div>
 
     </div>
@@ -163,7 +163,7 @@
       </div>
 
     </div>
-
+    </div>
 
 
 
@@ -228,7 +228,72 @@
       </div>
 
       </div>
-    </div>
+
+
+
+
+
+
+
+    <div id="myaddinternModal" class="editmodal">
+
+        <!-- Modal content -->
+        <div class="editmodalcontent">
+          <div class="card-container card">
+              <div class="cardaddintern">
+
+                      <h1>Internship Form</h1>
+                      <span class="close2" style="color: #aaaaaa;font-size: 28px;font-weight: bold;position: absolute;top: 10px;right: 10px;"><a href="#" style="text-decoration: none;">&times;</a></span>
+
+                      <h2>Company Bio</h2>
+                       <div class="box">
+                          <p>PROFILE</p>
+                       </div>
+                       <div class="box">
+                          <input type="text"><br>
+                       </div>
+                       <div class="box-2">
+                          <p>LOCATION</p>
+                          <a href="#">Kindly use full name. Eg:Mechanical Engineer</a>
+                       </div>
+                       <div class="box">
+                          <input type="text"><br>
+                       </div>
+                       <div class="box">
+                          <p>STIPEND</p>
+                       </div>
+                       <div class="box">
+                          <input type="text"><br>
+                       </div>
+                       <div class="box">
+                          <p>ALLOWANCES</p>
+                       </div>
+                       <div class="box">
+                          <input type="text"><br>
+                       </div>
+                       <div class="box">
+                          <p>REMARKS</p>
+                       </div>
+                       <div class="box">
+                          <input type="text"><br>
+                       </div>
+
+                  <div class="bottom">
+                     <a href="#" class="button-one"><u>Close</u></a>
+                      <button class="button-two">Next</button>
+
+
+                  </div>
+
+
+              </div>
+
+          </div>
+        </div>
+
+      </div>
+
+
 
 
     <script>
@@ -261,6 +326,35 @@
     </script>
 
 
+
+    <script>
+    // Get the modal
+    var modali = document.getElementById("myaddinternModal");
+
+    // Get the button that opens the modal
+    var btni = document.getElementById("Addinternformidbtn");
+
+    // Get the <span> element that closes the modal
+    var spani = document.getElementsByClassName("close2")[0];
+
+    // When the user clicks the button, open the modal
+
+    btni.onclick = function() {
+      modali.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    spani.onclick = function() {
+      modali.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modali) {
+        modali.style.display = "none";
+      }
+    }
+    </script>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

@@ -5,7 +5,7 @@
     <title>Company Profile</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-     
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -27,7 +27,7 @@
 
                <ul class="navbar-nav ml-auto" >
                  <li class="nav-item">
-                   <a class="nav-link" href="#">Dashboard</a>
+                   <a class="nav-link" href="/recruiter/profile">Dashboard</a>
                  </li>
                  <li class="nav-item">
                    <a class="nav-link" href="#">Internship Statistics</a>
@@ -36,7 +36,7 @@
                    <a class="nav-link" href="#">Contact Us</a>
                  </li>
                  <li class="nav-item">
-                   <a class="nav-link" href="#" style="color: #416EA8;">Log Out</a>
+                   <a class="nav-link" href="/recruiter/" style="color: #416EA8;">Log Out</a>
                  </li>
                </ul>
              </div>
@@ -60,7 +60,7 @@
                   <div class="h2 font-weight-bold">4/5</div>
                 </div>
               </div>
-              
+
             </div>
             <div class="col-md-4 pb-3 pb-md-0">
 
@@ -83,20 +83,20 @@
           <div class="row myrow-2">
            <div class="col-md-9 col-sm-12 mycol-2">
            <a href="#" id="left">Active Forms |</a>
-           
+
 
            <a href="#" id="right"> Deactivated Forms</a>
            </div>
            <div class="col-md-2 col-sm-12">
-            <form action="/hms/accommodations" method="GET"> 
-              
+            <form action="/hms/accommodations" method="GET">
+
                   <div class="input-group">
                     <input type="text" class="form-control" placeholder="Search" id="txtSearch"/>
                     <div class="input-group-btn">
                       <button class="btn btn-primary" type="submit">
                         <span class="glyphicon glyphicon-search"></span>
                       </button>
-                   
+
                 </div>
               </div>
             </form>
@@ -124,53 +124,58 @@
               </div>
             </div>
             <hr/>
+            <a type="button" data-toggle="modal" data-target="#exampleModal" style="text-decoration: none; color: Black;">
             <div class="row">
-              <div class="col-1">
-        <span class="dot green"></span>
-      </div>
-      <div class="col-3">
-        <span >Front-end</span>
-      </div>
-      <div class="col-3">
-        <span >N/A</span>
-      </div>
-      <div class="col-3">
-        <span >Mumbai</span>
-      </div>
-      <div class="col-2">
-        <span >13</span>
-      </div>
-      </div>
-      <hr/>
+                <div class="col-1">
+                <span class="dot green"></span>
+              </div>
+              <div class="col-3">
+                <span >Front-end</span>
+              </div>
+              <div class="col-3">
+                <span >N/A</span>
+              </div>
+              <div class="col-3">
+                <span >Mumbai</span>
+              </div>
+              <div class="col-2">
+                <span >13</span>
+              </div>
+            </div>
+            </a>
+            <hr/>
+            <a type="button" data-toggle="modal" data-target="#exampleModal" style="text-decoration: none; color: Black;">
              <div class="row">
 
                <div class="col-1">
-         <span class="dot blue"></span>
-       </div>
-       <div class="col-3">
-         <span >Front-end</span>
-       </div>
-       <div class="col-3">
-         <span >N/A</span>
-       </div>
-       <div class="col-3">
-         <span >Mumbai</span>
-       </div>
-       <div class="col-2">
-         <span >13</span>
-       </div>
+                 <span class="dot blue"></span>
+               </div>
+               <div class="col-3">
+                 <span >Front-end</span>
+               </div>
+               <div class="col-3">
+                 <span >N/A</span>
+               </div>
+               <div class="col-3">
+                 <span >Mumbai</span>
+               </div>
+               <div class="col-2">
+                 <span >13</span>
+               </div>
               </div>
+            </a>
               <hr/>
+              <a type="button" data-toggle="modal" data-target="#exampleModal" style="text-decoration: none; color: Black;">
               <div class="row">
                 <div class="col-1">
-          <span class="dot yellow"></span>
-        </div>
-        <div class="col-3">
-             <span >Front-end</span>
-             </div>
+              <span class="dot yellow"></span>
+            </div>
             <div class="col-3">
-              <span >N/A</span>
-             </div>
+                 <span >Front-end</span>
+                 </div>
+                <div class="col-3">
+                  <span >N/A</span>
+                 </div>
                 <div class="col-3">
                   <span >Mumbai</span>
               </div>
@@ -178,6 +183,7 @@
                <span >13</span>
              </div>
                </div>
+              </a>
                <hr/>
                <div class="row">
                  <div class="col-1">
@@ -216,6 +222,40 @@
 
          </div>
         </div>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                  <div class="title">
+                      Front-end Internship
+                  </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+                  <label for="question1" class="question" class="ques">APPLICANTS</label>
+                  <p class="number">24</p>
+                  <label for="question2" class="question">SHORTLISTED</label>
+                  <p class="number number2">12</p>
+              <div class="modal-footer">
+                  <div class="footer">
+                <button type="button" class="btn btn-white back deactivate" data-dismiss="modal" >Deactivate form</button>
+                <button type="button" class="btn btn-primary edit"  >Edit form</button>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
 
     <script src="{% static 'js/CompanyProfile.js' %}"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

@@ -3,16 +3,15 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('register', views.register, name='register'),
-    path('recruiterLanding', views.recruiterLanding, name='recruiterLanding'),
-    path('recruiterRegistration', views.recruiterRegistration, name='recruiterRegistration'),
-    path('studentProfile1', views.studentProfile1, name='studentProfile1'),
-    path('availableInternships', views.availableInternships, name='availableInternships'),
+    path('student/register', views.register, name='register'),
+    path('recruiter/', views.recruiterLanding, name='recruiterLanding'),
+    path('recruiter/register', views.recruiterRegistration, name='recruiterRegistration'),
+    path('student/profile', views.studentProfile1, name='studentProfile1'),
+    path('student/availableInternships', views.availableInternships, name='availableInternships'),
     path('studentProfile2', views.studentProfile2, name='studentProfile2'),
-    path('companyProfile', views.companyProfile, name='companyProfile'),
+    path('recruiter/profile', views.companyProfile, name='companyProfile'),
+    path('recruiter/internshipstatics', views.internStatic, name='internStatic'),
+
 
     
-    path('studentEditProfileCard', views.studentEditProfileCard, name='studentEditProfileCard'),
-    path('applyToCompanyCard', views.applyToCompanyCard, name='applyToCompanyCard'),
-    path('internshipQuestionsCard2', views.internshipQuestionsCard2, name='internshipQuestionsCard2'),
 ]

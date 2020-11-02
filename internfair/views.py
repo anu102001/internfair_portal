@@ -26,11 +26,5 @@ def studentProfile2(request):
 def companyProfile(request):
     return render(request, "AvailableInterns.html")
 
-def studentEditProfileCard(request):
-    return render(request, "StudentEditProfileCard.html")
-
-def applyToCompanyCard(request):
-    return render(request, "ApplyToCompanyCard.html")
-
-def internshipQuestionsCard2(request):
-    return render(request, "InternshipQuestionsCard2.html")
+def internStatic(request):
+    return render(request, "CompanyProfile.html")
