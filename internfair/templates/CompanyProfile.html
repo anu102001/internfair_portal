@@ -10,6 +10,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <link href="css-circular-prog-bar.css" rel="stylesheet">
    <link rel="stylesheet" href="{% static 'css/CompanyProfile.css' %}">
 
@@ -76,7 +78,10 @@
              </div>
              <div class="col-md-6 col-12  my-coll">
                <p>Add a new internship position and get brilliant interns!</p>
-               <button type="button" class="btn btn-primary">Add an internship form</button>
+               
+               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                Add an internship form
+              </button>
 
              </div>
           </div>
@@ -215,6 +220,35 @@
           </div>
 
          </div>
+        </div>
+        <body>
+          <!-- Button trigger modal -->
+     
+        
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                  <div class="title">
+                      Front-end Internship
+                  </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+                  <label for="question1" class="question" class="ques">APPLICANTS</label>
+                  <p class="number">24</p>
+                  <label for="question2" class="question">SHORTLISTED</label>
+                  <p class="number number2">12</p>
+              <div class="modal-footer">
+                  <div class="footer">
+                <button type="button" class="btn btn-white back deactivate" data-dismiss="modal" >Deactivate form</button>
+                <button type="button" class="btn btn-primary edit"  >Edit form</button>
+                  </div>
+              </div>
+            </div>
+          </div>
         </div>
 
     <script src="{% static 'js/CompanyProfile.js' %}"></script>
