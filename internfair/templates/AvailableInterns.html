@@ -179,7 +179,7 @@
         <div class="card card-container">
             <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
             <h4 class = "prof"> Edit Profile </h4>
-            <span class="close" style="color: #aaaaaa;font-size: 28px;font-weight: bold;position: absolute;top: 10px;right: 10px;"><a href="#" style="text-decoration: none;">&times;</a></span>
+            <span class="closeed" style="color: #aaaaaa;font-size: 28px;font-weight: bold;position: absolute;top: 10px;right: 10px;"><a href="#" class="close" style="text-decoration: none;">&times;</a></span>
 
 
             <img id="profile-img" class="profile-img-card" src="{% static 'image/p.png' %}" />
@@ -212,7 +212,7 @@
                     </div>
 
                     <div class="col col-sm-2">
-                      <a class="btn btn-sm smaller btn-link mybtn1" href="#">No</a>
+                      <a class="btn btn-sm smaller btn-link mybtn1 closeed" >No</a>
                     </div>
 
 
@@ -281,8 +281,8 @@
                        </div>
 
                   <div class="bottom">
-                     <a href="#" class="button-one"><u>Close</u></a>
-                      <button class="button-two">Next</button>
+                     <button class="button-one close">Close</button>
+                      <button id="internquestionscardid" class="button-two internquestionscardclass" >Next</button>
 
 
                   </div>
@@ -298,6 +298,48 @@
 
 
 
+
+
+      <div id="myquesModal" class="quesmodal">
+
+        <!-- Modal content -->
+        <div class="editmodalcontent">
+          <div>
+              <div class="quesCard">
+                  <div style="padding: 5%;">
+                      <div style="text-align: center;">
+                          <span class="heading">Internship Form</span><br><br>
+                      </div>
+
+                      <span class="sub-heading">Question for preliminary interview</span>
+                      <form action="">
+                          <br>
+                          <span class="Qheading">Question 1</span>
+                          <input type="text" class="input">
+                          <br><br>
+                          <span class="Qheading">Question 2</span>
+                          <input type="text" class="input">
+                          <br><br>
+                          <span class="Qheading">Question 3</span>
+                          <input type="text" class="input">
+                          <br><br>
+                          <button class="addQues">Add More Questions</button>
+                      </form>
+                      <br>
+                      <div class="row align-items-center bottom">
+                          <div class="col-5 text-right"><a href="#" class="back closeques">Back</a></div>
+                          <div class="col-7 text-left"><button href="#" class="Publish">Publish</button></div>
+                      </div>
+                  </div>
+
+              </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
     <script>
       // Get the modal
       var modal = document.getElementById("myEditModal");
@@ -306,7 +348,7 @@
       var btn = document.getElementById("myEditBtn");
 
       // Get the <span> element that closes the modal
-      var span = document.getElementsByClassName("close")[0];
+      var span = document.getElementsByClassName("closeed");
 
       // When the user clicks the button, open the modal
 
@@ -315,8 +357,11 @@
       }
 
       // When the user clicks on <span> (x), close the modal
-      span.onclick = function() {
-        modal.style.display = "none";
+      for (i = 0; i < span.length; i++) {
+        var tempedit = span[i];
+        tempedit.onclick = function() {
+          modal.style.display = "none";
+        }
       }
 
       // When the user clicks anywhere outside of the modal, close it
@@ -330,33 +375,73 @@
 
 
     <script>
-    // Get the modal
-    var modali = document.getElementById("myaddinternModal");
+      // Get the modal
+      var modali = document.getElementById("myaddinternModal");
 
-    // Get the button that opens the modal
-    var btni = document.getElementById("Addinternformidbtn");
+      // Get the button that opens the modal
+      var btni = document.getElementById("Addinternformidbtn");
 
-    // Get the <span> element that closes the modal
-    var spani = document.getElementsByClassName("close")[1];
+      // Get the <span> element that closes the modal
+      var spani = document.getElementsByClassName("close");
 
-    // When the user clicks the button, open the modal
+      // When the user clicks the button, open the modal
 
-    btni.onclick = function() {
-      modali.style.display = "block";
-    }
+      btni.onclick = function() {
+        modali.style.display = "block";
+      }
 
-    // When the user clicks on <span> (x), close the modal
-    spani.onclick = function() {
-      modali.style.display = "none";
-    }
+      // When the user clicks on <span> (x), close the modal
+      for (i = 0; i < spani.length; i++) {
+        var temp = spani[i];
+        temp.onclick = function() {
+          modali.style.display = "none";
+        }
+      }
 
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-      if (event.target == modali) {
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modali) {
+          modali.style.display = "none";
+        }
+      }
+    </script>
+
+
+    <script>
+      // Get the modal
+      var modalq = document.getElementById("myquesModal");
+
+      // Get the button that opens the modal
+      var btnq = document.getElementById("internquestionscardid");
+
+      // Get the <span> element that closes the modal
+      var spanq = document.getElementsByClassName("closeques")[0];
+
+      // When the user clicks the button, open the modal
+
+      btnq.onclick = function() {
+        modalq.style.display = "block";
         modali.style.display = "none";
       }
-    }
+
+      // When the user clicks on <span> (x), close the modal
+
+      spanq.onclick = function() {
+        modalq.style.display = "none";
+      }
+
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modalq) {
+          modalq.style.display = "none";
+        }
+      }
     </script>
+
+
+
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
