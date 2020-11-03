@@ -140,6 +140,10 @@
 
 
 
+
+
+
+
     .editmodal {
       align-items: center;
       align-content: center;
@@ -443,6 +447,13 @@
 
 
 
+
+
+
+
+
+
+
 //add intern card css
           #addinternmodal {
             align-items: center;
@@ -653,10 +664,8 @@
 
 
 
-// question card css
 
-
-        #myquesModal {
+        .quesmodal {
           align-items: center;
           align-content: center;
           display: none; /* Hidden by default */
@@ -675,7 +684,8 @@
           margin: auto;
           padding: 20px;
           border: 1px solid #888;
-          width: 80%;
+          border-radius: 3%;
+          width: 45%;
         }
 
 
@@ -690,7 +700,7 @@
         }
 
         .quesCard{
-            width: 540px;
+            width: 400px;
             height: 705px;
             margin: auto;
             background: #FFFFFF;
@@ -752,7 +762,6 @@
 
         .bottom{
             position: relative;
-            bottom: -100px !important;
         }
 
         .back{
@@ -797,10 +806,257 @@
             .input{
                 height: 40px;
             }
+            .quesmodalcontent{
+              width: 80%;
+            }
         }
 
         @media (max-width:400px){
             .Publish{
                 width: 70px;
+            }
+            .quesmodalcontent{
+              width: 70%;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+        .internprofilemodal {
+          align-items: center;
+          align-content: center;
+          display: none; /* Hidden by default */
+          position: fixed; /* Stay in place */
+          padding-top: 400px; /* Location of the box */
+          left: 0;
+          top: 0;
+          width: 100%; /* Full width */
+          height: 100%; /* Full height */
+          overflow: auto; /* Enable scroll if needed */
+          background-color: rgb(0,0,0); /* Fallback color */
+          background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+        .internprofilemodalcontent {
+          background-color: #fefefe;
+          margin: auto;
+          border: 1px solid #888;
+          border-radius: 3%;
+          width: 45%;
+        }
+
+        .internprofilecard{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 24px 36px;
+
+            justify-content: center;
+            align-items: center;
+
+            position: absolute;
+            width: 486px;
+            height: 559px;
+            /* width: 35%;
+            height: 75%; */
+
+            /* width:30vw; */
+            /* height: 50vh; */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            /* margin-left: 477px;
+            margin-top: 197px; */
+
+            background: #FFFFFF;
+            border-radius: 16px;
+
+            /* align-self: center; */
+            /* border: 2px solid red; */
+            border-radius: 5%;
+        }
+
+
+        .internprofilemain{
+            /* border: 2px solid blue; */
+            position: static;
+            /* width: 414px;
+            height: 511px; */
+            width: 90%;
+            height: 100%;
+
+            align-self: center;
+        }
+
+        .internprofileupper{
+            /* border: 2px solid black; */
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+
+            position: static;
+            /* width: 411px;
+            height: 433px; */
+            left: 1.5px;
+            top: 0px;
+        }
+
+        .internprofilecontent{
+            /* border: 2px solid purple; */
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+
+            position: static;
+            /* width: 379px;
+            height: 245px; */
+            left: 0px;
+            /* top: 188px; */
+            top: 20%;
+        }
+
+        .internprofileimg{
+            /* border: 2px solid rgb(6, 243, 26); */
+
+            position: static;
+            /* width: 152px;
+            height: 152px; */
+            /* left: 129.5px; */
+            top: 0px;
+            align-self: center;
+
+            background-blend-mode: normal;
+        }
+
+        img {
+            border-radius: 70%;
+            /* width: 152px;
+            height: 152px; */
+            width: 9em;
+            height: 9em;
+            align-self: center;
+        }
+
+        .internprofileall{
+            font-family: GT Walsheim Pro;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 18px;
+
+            color: #212121;
+        }
+
+        .internprofilelight{
+            font-family: GT Walsheim Pro;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 14px;
+            /* identical to box height */
+
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+
+            color: #B6B6B6;
+        }
+
+        .internprofileinfo{
+            padding: 0px;
+        }
+
+        .internprofilelower{
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 0px;
+            /* padding-top: 36px; */
+            padding-top: 5%;
+
+            position: static;
+            /* width: 414px;
+            height: 42px; */
+            left: 0px;
+            /* top: 469px; */
+
+            /* border: 2px solid brown; */
+        }
+
+
+        /* ul li{
+            display:inline-block !important;
+        }
+
+        ul{
+            padding-left: 0px;
+        }
+        */
+        button{
+            cursor: pointer;
+        }
+
+        .internprofileview{
+            position: static;
+            width: 201px;
+            height: 42px;
+            left: 0px;
+            top: 0px;
+
+            border: 1px solid #416EA8;
+            box-sizing: border-box;
+            border-radius: 4px;
+            background-color: #FFFFFF;
+
+            color: #416EA8;
+        }
+
+        .internprofileshortlist{
+            height: 42px;
+            width: 201px;
+            margin-left: 4px;
+
+            background: #416EA8;
+            border: 1px solid #416EA8;
+            box-sizing: border-box;
+            border-radius: 4px;
+
+            color: #FFFFFF;
+        }
+
+
+        button:hover{
+            opacity: 0.9;
+        }
+
+
+        @media screen and (max-width:589px) {
+            .internprofilecard
+            {
+              width: 100%;
+              height: 100vh;
+            }
+
+            .internprofileshortlist{
+                margin-left: 1px;
+                padding-bottom: 5px;
+            }
+
+            body{
+                background-color: white;
+            }
+
+            button{
+                padding: 2px;
             }
         }
