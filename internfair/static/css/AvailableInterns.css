@@ -1060,3 +1060,25 @@
                 padding: 2px;
             }
         }
+
+
+
+
+
+
+        .border{
+            border-radius: 16px;
+        }
+        .border-lg{
+            border-radius: 4px;
+        }
+        .btn-primary {
+            background-color: #416EA8!important;
+        }
+        .btn-outline-primary{
+            color:#416EA8!important;
+        }
+        .btn-outline-primary:hover{
+            background-color:#416EA8!important;
+            color: aliceblue!important;
+        }
