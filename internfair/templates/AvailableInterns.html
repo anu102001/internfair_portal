@@ -50,7 +50,7 @@
       <p>AI startup Kolkata, researching on neural pathways.</p>
       <div class="light-text" style="font-size: .75rem;">LOCATION</div>
       <p>Kolkata</p>
-      <a href= "#" style="color: #416EA8; font-size: .75rem;">Edit Profile</a>
+      <a href= "#" style="color: #416EA8; font-size: .75rem;" id="first">Edit Profile</a>
     </div>
     <div class="col-md-6 d-flex align-items-center">
       <div>
@@ -164,9 +164,76 @@
       
     </div>
   
-  
+    <div id="myModal" class="modal">
+      <div class="container">
+        <div class="card card-container">
+            <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+            <h4 class = "prof"> Edit Profile </h4>
+ 
+ 
+            <img id="profile-img" class="profile-img-card" src="{% static 'image/p.png' %}" />
+            <div class=" col-md-8">
+ 
+            </div>
+ 
+            <p id="profile-name" class="profile-name-card"></p>
+            <form class="form-signin">
+              <button class=" uploadbtn" onclick="document.getElementById('getFile').click()">Upload/Change Company Photo</button>
+              <input type='file' id="getFile" style="display:none">
+                <span id="reauth-email" class="reauth-email"></span>
+                <label class="company-name" for="company-name">
+                     COMPANY NAME
+                </label>
+                <input type="text" id="company-name" class="form-control" required autofocus>
+                <label class="company-name" for="company-description">
+                     COMPANY DESCRIPTION
+                </label>
+                <input type="text" id="company-description" class="form-control" required>
+                <label class="company-name" for="company-locations">
+                     COMPANY LOCATION
+                </label>
+                <input type="text" id="company-location" class="form-control" required>
+ 
+                <div class="form-group row" id="bot">
+ 
+                    <div class="col col-md-4"class="bot">
+                      <button class="btn btn-sm smaller btn-btn-primary  mybtn" type="submit">Save Changes</button>
+                    </div>
+ 
+                    <div class="col col-sm-2">
+                      <button class="btn btn-sm smaller btn-link mybtn1" type="submit">No</button>
+                    </div>
+ 
+ 
+ 
+ 
+                </div>
+ 
+ 
+ 
+            </form><!-- /form -->
+ 
+        </div><!-- /card-container -->
+    </div><!-- /container -->
+    </div>
 
 </div>
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  
+  // Get the button that opens the modal
+  var btn = document.getElementById("first");
+  
+  // Get the <span> element that closes the modal
+  
+  
+  // When the user clicks the button, open the modal 
+  btn.onclick = function() {
+    modal.style.display = "block";
+    
+  }
+</script>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
