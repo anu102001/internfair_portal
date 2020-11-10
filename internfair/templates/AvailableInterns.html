@@ -55,7 +55,8 @@
     <div class="col-md-6 d-flex align-items-center">
       <div>
         <p>Add a new internship position to start recruiting</p>
-      <a class="btn btn-custom btn-responsive" href="#" role="button">Add an internship form</a>
+      <a class="btn btn-custom btn-responsive" href="#" role="button" data-toggle="modal" data-target="#exampleModal">Add an internship form</a>
+      
       </div>
       
     </div>
@@ -165,7 +166,7 @@
     </div>
   
     <div id="myModal" class="modal">
-      <div class="container">
+      
         <div class="card card-container">
             <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
             <h4 class = "prof"> Edit Profile </h4>
@@ -201,7 +202,7 @@
                     </div>
  
                     <div class="col col-sm-2">
-                      <button class="btn btn-sm smaller btn-link mybtn1" type="submit">No</button>
+                      <button class="btn btn-sm smaller btn-link mybtn1" id="no" type="submit">No</button>
                     </div>
  
  
@@ -214,10 +215,102 @@
             </form><!-- /form -->
  
         </div><!-- /card-container -->
-    </div><!-- /container -->
+    
     </div>
 
 </div>
+
+<!-- / modal-2 -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+          <div class="title">
+              Internship Form
+          </div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="prelim">
+        Company Bio
+      </div>
+          <label for="question1" class="question" id="ques">PROFILE</label>
+          <div class="form-group">
+              <input type="text" class="form-control" id="jo" id="question1" >
+          </div>
+          <label for="question2" class="question">LOCATION</label>
+          <div class="form-group">
+              <input type="text" class="form-control"  id="jo"id="question2">
+          </div>
+          <label for="question3" class="question">STIPEND</label>
+          <div class="form-group">
+              <input type="text" class="form-control" id="jo" id="question3" >
+          </div>
+          <label for="question3" class="question">ALLOWANCES</label>
+          <div class="form-group">
+              <input type="text" class="form-control" id="jo" id="question3" >
+          </div>
+          <label for="question3" class="question">REMARKS</label>
+          <div class="form-group">
+              <input type="text" class="form-control" id="jo" id="question3" >
+          </div>
+          
+      <div class="modal-footer">
+          <div class="footer" >
+        <button type="button" class="btn btn-white "id="close" data-dismiss="modal" >Close</button>
+        <button type="button" class="btn btn-primary next" id="button1"  >Next</button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <!--modal-3-->
+  <div id="myModal3" class="modal">
+
+    <!-- Modal content -->
+   
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+              <div class="title">
+                  Internship Form
+              </div>
+            <button type="button" class="close1" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="prelim">
+              Questions for preliminary interview
+          </div>
+              <label for="question1" class="question" class="ques">QUESTION 1</label>
+              <div class="form-group">
+                  <input type="text" class="form-control" id="jo1"id="question1" >
+              </div>
+              <label for="question2" class="question">QUESTION 2</label>
+              <div class="form-group">
+                  <input type="text" class="form-control"id="jo1" id="question2">
+              </div>
+              <label for="question3" class="question">QUESTION 3</label>
+              <div class="form-group">
+                  <input type="text" class="form-control" id="jo1"id="question3" >
+              </div>
+              
+          <div class="modal-footer">
+              <div class="footer" id="bottom3">
+            <button type="button" class="btn btn-white " id="close" id="back1" >Back</button>
+            <button type="button" class="btn btn-primary submit"  >publish</button>
+              </div>
+          </div>
+        </div>
+      </div>
+  
+
+  
+
 <script>
   // Get the modal
   var modal = document.getElementById("myModal");
@@ -233,6 +326,45 @@
     modal.style.display = "block";
     
   }
+  window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+  }
+  var btn2 = document.getElementById("no");
+  btn2.onclick = function() {
+    modal.style.display = "none";
+    
+  }
+  var modal3 = document.getElementById("myModal3");
+
+// Get the button that opens the modal
+var btn3 = document.getElementById("button1");
+var close1 = document.getElementById("back1")
+// Get the <span> element that closes the modal
+var span2= document.getElementsByClassName("close1")[0];
+
+// When the user clicks the button, open the modal 
+btn3.onclick = function() {
+  modal3.style.display = "block";
+
+}
+
+// When the user clicks on <span> (x), close the modal
+span2.onclick = function() {
+  modal3.style.display = "none";
+}
+var close1 = document.getElementById("back1");
+close1.onclick = function() {
+  modal3.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal3.style.display = "none";
+  }
+}
 </script>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

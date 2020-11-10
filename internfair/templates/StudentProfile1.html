@@ -50,7 +50,7 @@
       <p>Chemical Science And Technology</p>
       <div class="light-text" style="font-size: .75rem;">ROLL NUMBER</div>
       <p>160103019</p>
-      <a href= "#" style="color: #416EA8; font-size: .75rem;">Edit Profile</a>
+      <a href= "#" style="color: #416EA8; font-size: .75rem;" id="first">Edit Profile</a>
     </div>
     <div class="col-md-6 d-flex align-items-center">
       
@@ -81,8 +81,89 @@
         <p>You haven't applied to any companies yet. Start by looking at<br>company's requirements</p>
       <a class="btn btn-primary btn-lg" href="{% url 'AvailableInternships' %}" role="button" style="background: #416EA8;">Apply to companies</a>
       </div>
+     
+
+      <div id="myModal" class="modal1">
+      
+        <div class="card card-container">
+            <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+            <h4 class = "prof"> Edit Profile </h4>
+ 
+ 
+            <img id="profile-img" class="profile-img-card" src="{% static 'image/p.png' %}" />
+            <div class=" col-md-8">
+ 
+            </div>
+ 
+            <p id="profile-name" class="profile-name-card"></p>
+            <form class="form-signin">
+              <button class=" uploadbtn" onclick="document.getElementById('getFile').click()">Upload/Change Company Photo</button>
+              <input type='file' id="getFile" style="display:none">
+                <span id="reauth-email" class="reauth-email"></span>
+                <label class="company-name" for="company-name">
+                     ROLL NUMBER
+                </label>
+                <input type="text" id="company-name" class="form-control" required autofocus>
+                <label class="company-name" for="company-description">
+                     DEPARTMENT
+                </label>
+                <input type="text" id="company-description" class="form-control" required>
+                <label class="company-name" for="company-locations">
+                     BIO
+                </label>
+                <input type="text" id="company-location" class="form-control" required>
+ 
+                <div class="form-group row" id="bot">
+ 
+                    <div class="col col-md-4"class="bot">
+                      <button class="btn btn-sm smaller btn-btn-primary  mybtn" type="submit">Save Changes</button>
+                    </div>
+ 
+                    <div class="col col-sm-2">
+                      <button class="btn btn-sm smaller btn-link mybtn1" id="no"type="submit">No</button>
+                    </div>
+ 
+ 
+ 
+ 
+                </div>
+ 
+ 
+ 
+            </form><!-- /form -->
+ 
+        </div><!-- /card-container -->
+    
+    </div>
+
+</div>
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  
+  // Get the button that opens the modal
+  var btn = document.getElementById("first");
+  
+  // Get the <span> element that closes the modal
   
   
+  // When the user clicks the button, open the modal 
+  btn.onclick = function() {
+    modal.style.display = "block";
+    
+  }
+  window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+  }
+  var btn2 =getElementById("no");
+  btn2.onclick = function() {
+    modal.style.display = "none";
+    
+  }
+
+</script>
   
 </body>
 </html>
