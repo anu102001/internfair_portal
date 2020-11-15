@@ -1,5 +1,6 @@
 <!doctype  html>
 {% load static %}
+{% load widget_tweaks %}
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -54,18 +55,23 @@
 
               <span class="float-left font-size"><h5>Recruiter's login </h5></span><span class="float-right links"><a href="/">I am Student</a></span><br>
 
-              <form action="/action_page.php">
+              <form action="" method="POST" role="form" novalidate>
+                {% csrf_token %}
                 <div class="form-group ">
+                  {% render_field form.username type="email" class="form-control mb-2 mr-2" id="email" placeholder="Email" name="email" %}
                   <!-- <label for="email" class=" mb-2 mr-2"> </label> -->
-                  <input type="email" class="form-control mb-2 mr-2" id="email" placeholder="Email" name="email">
                 </div>
                 <br>
                 <div class="form-group ">
                   <label for="pwd" class=" mb-2 mr-2">Password:</label>
-                  <input type="password" class="form-control mb-2 mr-2" id="pwd" placeholder="Password" name="pswd">
+                  {% render_field form.password type="password" class="form-control mb-2 mr-2" id="pwd" placeholder="Password" name="pswd" %}
                 </div>
                 <br>
-                <button type="submit" class="btn btn-block  ">Login</button>
+                {% render_field form.errors %}
+                <button type="submit" value="Submit" value="Login" class="btn btn-block">Login</button>
+                {% for message in messages %}
+                  <p>{{message}}</p>
+                {% endfor %}
 
                 <div class="links mt-1">
                   <span class="float-left links "><a href="/recruiter/register">don't have an account</a></span>

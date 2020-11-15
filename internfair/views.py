@@ -11,8 +11,6 @@ from .forms import studentsignupform, recruitersignupform
 # Create your views here.
 
 
-def recruiterLanding(request):
-    return render(request, "RecruiterLanding.html")
 
 
 class student_register(CreateView):
@@ -73,7 +71,36 @@ def index(request):
 
     return render(request, "StudentLanding.html",
     context={'form': AuthenticationForm()} )
+
     '''
+
+def recruiterLanding(request):
+    if request.method=='POST':
+        password = request.POST.get('password')
+        username = request.POST.get('username')
+
+        user = authenticate(request, username=username, password=password)
+
+        if user is not None:
+            login(request, user)
+            if user.is_recruiter == True:
+                return redirect('../recruiter/profile')
+            else:
+                return redirect('../student/profile')
+        else:
+            messages.info(request, 'Username OR password is incorrect')
+
+    return render(request, "RecruiterLanding.html",
+    context={'form': AuthenticationForm()} )
+
+
+
+
+
+
+
+
+
 def logout_view(request):
     logout(request)
     return redirect('')
