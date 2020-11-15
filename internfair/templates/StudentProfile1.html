@@ -33,7 +33,9 @@
             <a class="nav-link" href="#">Contact Us</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="/" style="color: #416EA8;">Log Out</a>
+            {% if user.is_authenticated %}
+            <a class="nav-link" href="{% url 'logout' %}" style="color: #416EA8;">Log Out</a>
+            {% endif %}
           </li>
         </ul>
       </div>
@@ -45,7 +47,7 @@
     <div class="row" style="margin-top: 6rem;">
       <div class="col-12 col-md-2 d-flex justify-content-center align-items-center"><img src="{% static 'image/test_image_ecell.jpg' %}" id="logo"></div>
     <div class="col-md-4 pb-3 pb-md-0">
-      <h1 id="company-name">Ayush Aggarwal</h1>
+      <h1 id="company-name">{{ form.first_name }}</h1>
       <div class="light-text" style="font-size: .75rem;">DEPARTMENT</div>
       <p>Chemical Science And Technology</p>
       <div class="light-text" style="font-size: .75rem;">ROLL NUMBER</div>

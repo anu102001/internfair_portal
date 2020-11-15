@@ -13,15 +13,20 @@ body{
     font-size: 1rem;
 }
 
+.errors_page{
+  color: red;
+}
+
+
 .navbar-brand{
     padding-left: 130px;
     padding-top: 25px;
-    padding-bottom: 25px;   
+    padding-bottom: 25px;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 18px;
-    text-align: center; 
+    text-align: center;
     font-family: GT Walsheim Pro ;
 }
 
@@ -74,7 +79,7 @@ nav{
     padding-top: 50px;
     padding-bottom: 32px !important;
     font-family: GT Walsheim Pro ;
-    
+
     /* border: 2px brown solid; */
 }
 
