@@ -34,7 +34,9 @@
             <a class="nav-link" href="#">Contact Us</a>
           </li>
           <li class="nav-item active py-md-2">
-            <a class="nav-link" href="#" style="color: #416EA8;">Log Out</a>
+            {% if user.is_authenticated %}
+            <a class="nav-link" href="{% url 'logout' %}" style="color: #416EA8;">Log Out</a>
+            {% endif %}
           </li>
         </ul>
       </div>

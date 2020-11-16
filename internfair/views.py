@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views import View
 from django.contrib import messages
+from django.http import HttpResponse
 from django.views.generic import CreateView
 from .models import Student, Recruiter, User
 from django.forms import inlineformset_factory
@@ -45,34 +46,14 @@ def index(request):
             if user.is_student == True:
                 return redirect('../student/profile')
             else:
-                return redirect('../student/profile')
+                messages.info(request, 'You are a recruiter, login from here')
+                return redirect('../recruiter/')
         else:
             messages.info(request, 'Username OR password is incorrect')
 
     return render(request, "StudentLanding.html",
     context={'form': AuthenticationForm()} )
-    '''
-        form = AuthenticationForm(data=request.POST)
-        if form.is_valid():
-            username = form.cleaned_data.get('username')
-            password = form.cleaned_data.get('password')
-            user = authenticate(username=username, password=password)
-            if user is not None :
-                if user.is_recruiter == True:
-                    login(request,user)
-                    return redirect('/recruiter/profile')
-                else:
-                    login(request,user)
-                    return redirect('/student/profile')
-            else:
-                messages.error(request,"Invalid username or password")
-        else:
-                messages.error(request,"Invalid username or password")
 
-    return render(request, "StudentLanding.html",
-    context={'form': AuthenticationForm()} )
-
-    '''
 
 def recruiterLanding(request):
     if request.method=='POST':
@@ -86,7 +67,8 @@ def recruiterLanding(request):
             if user.is_recruiter == True:
                 return redirect('../recruiter/profile')
             else:
-                return redirect('../student/profile')
+                messages.info(request, 'You are a Student, login from here')
+                return redirect('../')
         else:
             messages.info(request, 'Username OR password is incorrect')
 
@@ -103,19 +85,25 @@ def recruiterLanding(request):
 
 def logout_view(request):
     logout(request)
-    return redirect('')
+    return HttpResponseRedirect("")
 
+
+@login_required(login_url='/')
 def studentProfile1(request):
     return render(request, "StudentProfile1.html")
 
+@login_required(login_url='/')
 def availableInternships(request):
     return render(request, "AvailableInternships.html")
 
+@login_required(login_url='/')
 def studentProfile2(request):
     return render(request, "StudentProfile2.html")
 
+@login_required(login_url='/recruiter')
 def companyProfile(request):
     return render(request, "AvailableInterns.html")
 
+@login_required(login_url='/recruiter')
 def internStatic(request):
     return render(request, "CompanyProfile.html")
