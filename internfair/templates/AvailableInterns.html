@@ -307,8 +307,111 @@
           </div>
         </div>
       </div>
+  </div>
+  <!--modal-4-->
+  
   
 
+  <!-- The Modal -->
+  <div id="modalthree" class="modals">
+  
+    <span class="close">&times;</span>
+    <div class="cards">
+      
+          <div class="main">
+              <div class="upper">
+                  <div class="img">
+            <img src="test_image_ecell.jpg" alt="">
+            
+          </div>
+          
+                  <div class="content">
+                      <h2>
+                          Vedant Chourasia
+                      </h2>
+                      <div class="info">
+                          <p class="light">
+                              DEPARTMENT
+                          </p>
+                          <p class="all">
+                              Mechanical Engineering
+                          </p>
+                      </div>
+                      <div class="info">
+                          <p class="light">
+                              ROLL NUMBER
+                          </p>
+                          <p class="all">
+                              190103102
+                          </p>
+                      </div>
+                      <div class="info">
+                          <p class="light">
+                              BIO
+                          </p>
+                          <p class="all">
+                              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus facilis, quas est qui omnis
+                                  ea!
+                          </p>
+                      </div>
+                  </div>
+              </div>
+              <div class="lower">
+                  
+                      <button type="button" class="view"  data-toggle="modal" data-target="#details">View answers to form</button>
+                      <button class="shortlist" type="button">Shortlist</button>
+                  
+              </div>
+  
+                  <!-- <ul class="ul">
+                      <li class="view">
+                          <button type="button" class="view">View answers to form</button>
+                      </li>
+                      <li class="shortlist">
+                          <button class="shortlist" type="button">Shortlist</button>
+                      </li>
+                  </ul> -->
+              </div>
+          </div>
+      </div>
+       
+  
+  </div>
+  
+  
+  
+  <!-- Modal for details -->
+  <div class="modal fade  " id="details"> 
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable ">
+    <div class="modal-content border">
+  
+    
+      <h3 class="modal-title pl-4 pt-4"><b>Yashwardhan singh</b></h3>
+  
+    
+    
+    <div class="modal-body">
+      
+      
+      <p><h7 id="ques">Q1</h7><br><b>Lorem Ipsum has been the industelease oith desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          1s. It has survived not only five centuries, but also the leap int column</b></p>
+      
+      <p><h7 id="ques">Q2</h7><br><b>  ry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and 1960s with the r1st column
+        </b></p>
+      
+      <p><h7 id="ques">Q3</h7><br><b>1st f Letraset sheets containing Lorem Ipsum passages, and more recently wcolum scrambled it to make a type specimen bookto electronic typesetting, remaining essentially unchanged. It was popularised in then</b></p>  
+    </div>  
+    
+    <div class="pb-3 mx-5 ">
+      
+        <a href='#' class='btn  mx-2 px-5 btn-outline-primary border-lg '>View profile</a>
+        <a href='#' class='btn  mx-2 px-5 btn-primary   border-lg '>Shortlist</a>
+      
+    </div>    
+    
+    </div>
+  </div>
+  </div>
   
 
 <script>
@@ -354,15 +457,36 @@ btn3.onclick = function() {
 span2.onclick = function() {
   modal3.style.display = "none";
 }
-var close1 = document.getElementById("back1");
-close1.onclick = function() {
-  modal3.style.display = "none";
-}
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
     modal3.style.display = "none";
+  }
+}
+// Get the modal four
+var modal_3 = document.getElementById("modalthree");
+
+// Get the button that opens the modalthree
+var btn_3 = document.getElementById("first-student");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn_3.onclick = function() {
+  modal_3.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal_3.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal_3) {
+    modal_3.style.display = "none";
   }
 }
 </script>
